@@ -11,7 +11,7 @@ function createPost() {
 
   document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
 
-  var blogSection = postTemplate({ 'title': postTitle, 'body': post, 'author': postAuthor });
+  var blogSection = postTemplate({ 'title': postTitle, 'body': post, 'poster': postAuthor });
   var commentsSection = commentsTemplate();
   var postElement = document.getElementById("post");
 
@@ -23,7 +23,7 @@ function postComment() {
   var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
 
   var commentText = document.getElementById("commentText").value;
-  var commenterName = document.getElementById("commenterName").value;
+  var commenterName = document.getElementById("commenter").value;
 
   var commentsSection = document.getElementById("comments");
   commentsSection.innerHTML += commentTemplate({ 'commenter': commenterName, 'comment': commentText });
