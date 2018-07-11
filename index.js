@@ -25,6 +25,6 @@ function postComment() {
   var commentText = document.getElementById("commentText").value;
   var commenterName = document.getElementById("commenter").value;
 
-  var commentsSection = document.getElementById("comments");
+  var commentsSection = document.getElementById("comment");
   commentsSection.innerHTML += commentTemplate({ 'commenter': commenterName, 'comment': commentText });
 }
