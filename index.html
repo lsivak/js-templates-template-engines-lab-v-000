@@ -22,18 +22,15 @@
 <script>mocha.setup('bdd');</script>
 <script src="test/index-test.js"></script>
 
-<form id="comments-form" onsubmit="postComment();return false;">
-Commenter: <input type="text" id="commenterName"><br>
-Comment: <input type="text" id="commentText"><br>
-<input type="submit">
-</form>
+
   <script id="comments-template" type="text/x-lodash-template">
+  <div id="comments">
   <form onsubmit="postComment();return false;">
   Commenter: <input type="text" id="commenterName"><br>
   Comment: <input type="text" id="commentText"><br>
   <input type="submit">
   </form>
-    <div id="comments">
+    
     </div>
   </script>
 
